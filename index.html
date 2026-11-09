@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Door HSV Care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="sr" href="#view">Skip to content</a>
+<div class="notice">Student concept prototype by Group 15. Not a live clinical service. Everything here stays in your browser session and nothing is sent anywhere.</div>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap nav-in">
+    <a class="brand" href="#home" aria-label="Open Door home">
+      <svg viewBox="0 0 22 30" aria-hidden="true"><path d="M2 29V11C2 5 6 1.5 11 1.5S20 5 20 11v18z" fill="none" stroke="#ffb457" stroke-width="2.4"/><path d="M11 6c4 0 6 2.4 6 5.4V27H11z" fill="#ffb457" opacity=".85"/></svg>
+      Open Door
+    </a>
+    <ul class="menu" id="menu"></ul>
+    <div class="nav-right">
+      <a class="acct" id="acctBtn" href="#my-dashboard"></a>
+      <button class="exit" id="exit" type="button" title="Hide this page instantly. Shortcut: press Esc twice">Quick exit</button>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"></button>
+    </div>
+  </div>
+</nav>
+<div class="mnav" id="mnav"></div>
+<div id="subnav"></div>
+
+<main id="view" tabindex="-1"></main>
+
+<footer id="footer"></footer>
+
+<button class="demo-btn" id="demoBtn" type="button" aria-expanded="false" aria-controls="demo">Demo tools</button>
+<div class="demo" id="demo" hidden></div>
+
+<div id="modalRoot"></div>
+<div id="toastRoot" aria-live="polite"></div>
+
+<div class="lockscr" id="lockscr" hidden>
+  <div>
+    <h2 style="font-family:var(--display);font-weight:400;font-size:2.4rem">Locked for your privacy</h2>
+    <p style="color:var(--on-ink-muted)">Your session was idle, so the page is hidden.</p>
+    <button class="btn btn-glow" type="button" id="unlock">Unlock</button>
+  </div>
+</div>
+
+<div class="decoy" id="decoy" hidden tabindex="-1" aria-label="Blank notes page">
+  <h4>Notes</h4>
+  <div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div>
+  <small>Esc Esc to return</small>
+</div>
+
+<script src="core.js"></script>
+<script src="pages-care.js"></script>
+<script src="pages-more.js"></script>
+<script src="boot.js"></script>
+</body>
+</html>
